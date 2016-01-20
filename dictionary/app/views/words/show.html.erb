@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @word.word %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @word.definition %>
+</p>
+
+<p>
+  <strong>Synonyms:</strong>
+  <ul>
+  <% @synonyms.each do |word| %>
+    <li><%= word.name %></li>
+  <% end %>
+  </ul>
+</p>
+
+<p><%= link_to 'Add Synonym', new_synonym_path %></p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

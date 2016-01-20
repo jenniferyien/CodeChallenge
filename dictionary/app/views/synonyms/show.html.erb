@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @synonym.word %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @synonym.name %>
+</p>
+
+<%= link_to 'Edit', edit_synonym_path(@synonym) %> |
+<%= link_to 'Back', synonyms_path %>
